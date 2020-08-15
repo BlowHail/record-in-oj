@@ -1,0 +1,16 @@
+
+{
+    "code-runner.saveFileBeforeRun": true,
+    "code-runner.fileDirectoryAsCwd": true,
+    "code-runner.clearPreviousOutput": true,
+    "code-runner.runInTerminal": true,
+    "code-runner.preserveFocus": false,
+    "code-runner.executorMap": {
+        "c": "gcc $fileName -o $fileNameWithoutExt && ./$fileNameWithoutExt",
+        "cpp": "g++ $fileName -o $fileNameWithoutExt && ./$fileNameWithoutExt",
+    },
+    "files.associations": {
+        "iostream": "cpp",
+        "ostream": "cpp"
+    },
+}
