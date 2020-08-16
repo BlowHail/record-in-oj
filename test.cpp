@@ -1,4 +1,3 @@
-//测试
 #include<bits/stdc++.h>
 using namespace std;
 const int maxn=1e6+9;
@@ -9,7 +8,6 @@ vector<int>g[maxn];
 bool vis[maxn];
 int match[maxn];
 int n,m;
- 
 bool cmp(int x,int y)
 {
     return d[x]>d[y];
@@ -19,7 +17,6 @@ bool dfs(int u)
     cout<<u<<endl;
     for(auto v:g[u])
     {
-        
         if(!vis[v])
         {
             vis[v]=1;
