@@ -11,29 +11,42 @@
 #define inf 0x3f3f3f3f
 #define mod 1000000007
 using namespace std;
-#define _int __int128_t
-inline int read()
-{
-    int x=0,f=1;
-    char c=getchar();
-    while(c<'0'||c>'9') {if(c=='-') f=-1;c=getchar();}
-    while(c>='0'&&c<='9') x=(x<<1)+(x<<3)+c-'0',c=getchar();
-    return f*x;
-}
-void print(int x)
-{
-    if(x < 0) {putchar('-');x = -x;}
-    if(x/10) print(x/10);
-    putchar(x%10+'0');
-}
-int n,m;
+int n,m,a[10005],ans[10005];
 int main ()
 {
     int T,i,t,j,k,p,sum=0;
-    cin>>T;
-    while(T--){
-        
+    cin>>n;
+    p=1;
+    for(i=2;i<=n;++i){
+        cout<<"?"<<" "<<p<<" "<<i<<endl;
+        fflush(stdout);
+        cin>>j;
+
+        cout<<"?"<<" "<<i<<" "<<p<<endl;
+        fflush(stdout);
+        cin>>k;
+
+        if(j>k){
+            a[j]=1;
+            ans[p]=j;
+            p=i;
+        }
+        else{
+            a[k]=1;
+            ans[i]=k;
+        }
     }
-    
+    cout<<"!"<<" ";
+    for(i=1;i<=n;++i){
+        if(ans[i])
+            cout<<ans[i]<<" ";
+        else{
+            for(int v=1;v<=n;++v)
+                if(a[v]==0){
+                    cout<<v<<" ";
+                    break;
+                }
+        }
+    }
     return 0;
 }
