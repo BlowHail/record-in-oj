@@ -42,19 +42,15 @@ int main ()
 
     sum=0;
     for(i=0;i<n;++i){
-        if(s[i]!=s2[i]){
             for(j=0;j<n;++j){
-                if(s[j]==s2[i]){
-                    s[j]='0';
+                if(s2[j]==s[i]){
+                    s2[j]='0';
                     p=j+a[j];
                     break;
                 }
                 a[j]++;
             }
             sum+=p-i;
-            cout<<sum<<endl;
-        }
-        s[i]='0';
     }
     cout<<sum<<endl;
 
