@@ -26,29 +26,20 @@ void print(int x)
     if(x/10) print(x/10);
     putchar(x%10+'0');
 }
-int n,m,a[100005];
-
+int n,m;
 int main ()
 {
-    int T,i,t,j,k,p,sum=0; // b 1352  y 650 q 
-    p='q'-'a'+1;
-    cin>>n;
-    for(i=1;i<=n;++i){
-        scanf("%d",&a[i]);
+    int T,i,t,j,k,p,sum=0;
+    p=2019*2019;
+    for(i=2020;i<20000;i++){
+        k=i*i;
+        j=k+(k-p);
+        t=sqrt(j);
+        if(t*t==j){
+            cout<<i<<" "<<t<<" "<<i+t<<endl;
+            break;
+        }
     }
-    int maxs=0;
-    p=0;
-    int f=1;
-    for(i=1;i<=n;i<<=1){
-        sum=0;
-        //cout<<i<<endl;
-        p++;
-        for(k=i;k<(i<<1)&&k<=n;++k)
-            sum+=a[k];
-        if(maxs<sum)
-            maxs=sum,f=p;
-    }
-    cout<<f<<endl;
-
+    
     return 0;
 }
