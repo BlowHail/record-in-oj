@@ -7,7 +7,7 @@
                 "${workspaceFolder}/**"
             ],
             "defines": [],
-            "compilerPath": "E:/Mingw/bin/g++.exe",
+            "compilerPath": "C:/Mingw/bin/g++.exe",
             "cStandard": "c11",
             "cppStandard": "c++17"
         }
